@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Services\Articles\ArticlesService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
@@ -33,5 +34,13 @@ class ArticlesController extends Controller
             'search' => $search,
         ]);
         return view('articles.index');
+    }
+
+    public function show(Article $article)
+    {
+        View::share([
+            'article' => $article,
+        ]);
+        return view('articles.show');
     }
 }

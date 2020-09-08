@@ -37,7 +37,7 @@ class AppServiceProvider extends ServiceProvider
 
     private function bindSearchClient()
     {
-        $this->app->bind(ElasticsearchClient::class, function ($app) {
+        $this->app->bind(ElasticsearchClient::class, function () {
             return ClientBuilder::create()
                 ->setHosts(config('services.search.hosts'))
                 ->build();

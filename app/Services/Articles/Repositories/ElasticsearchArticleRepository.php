@@ -24,7 +24,6 @@ class ElasticsearchArticleRepository implements ArticleRepository
     public function search(string $search, int $limit, int $offset = 0): Collection
     {
         $items = $this->searchOnElasticsearchTitle($search, $limit, $offset);
-        dd($items);
         return $this->buildCollection($items);
     }
 
@@ -36,28 +35,15 @@ class ElasticsearchArticleRepository implements ArticleRepository
             'type' => $model->getSearchType(),
             'body' => [
                 'query' => [
-                    'multi_match' => [
-                        'fields' => $this->generateSearchFieldsWithPriority(),
-                        'query' => $query,
-                    ],
-                ],
-            ],
-            'size' => $limit,
-            'from' => $offset,
-        ]);
-    }
-
-    private function searchOnElasticsearchByBody(string $query, int $limit, int $offset): array
-    {
-        $model = new Article();
-        return $this->elasticsearch->search([
-            'index' => $model->getSearchIndex(),
-            'type' => $model->getSearchType(),
-            'body' => [
-                'query' => [
-                    'multi_match' => [
-                        'fields' => ['title', 'body^5', 'tags'],
-                        'query' => $query,
+                    'query_string' => [
+                        'fields' => [
+                            'title^5',
+                            'body',
+                            'tags',
+                        ],
+                        'query' => $query . '*',
+                        "analyze_wildcard" => true,
+                        "allow_leading_wildcard" => true
                     ],
                 ],
             ],
