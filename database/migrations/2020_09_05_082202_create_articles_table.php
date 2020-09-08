@@ -18,6 +18,7 @@ class CreateArticlesTable extends Migration
             $table->string('title');
             $table->text('body');
             $table->json('tags');
+            $table->integer('views')->default(0);
             $table->timestamps();
         });
     }

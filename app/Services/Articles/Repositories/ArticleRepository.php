@@ -8,11 +8,16 @@
 namespace App\Services\Articles\Repositories;
 
 
+use App\Models\Article;
 use Illuminate\Support\Collection;
 
 interface ArticleRepository
 {
 
-    public function search(string $search, int $limit, int $offset = 0): Collection;
+    public function getAll(): Collection;
+
+    public function updateViewsCount(Article $article, $viewsCount): void;
+
+    public function update(Article $article, $data): void;
 
 }

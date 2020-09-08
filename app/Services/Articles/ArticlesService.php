@@ -8,19 +8,28 @@
 namespace App\Services\Articles;
 
 
-use App\Services\Articles\Repositories\ArticleRepository;
+use App\Models\Article;
+use App\Services\Articles\Handlers\ViewHandler;
+use App\Services\Articles\Repositories\Search\SearchArticleRepository;
+use App\Services\Articles\Repositories\Statistics\ViewsArticleRepository;
 use Illuminate\Support\Collection;
 
 class ArticlesService
 {
 
-    private ArticleRepository $articleRepository;
+    private SearchArticleRepository $articleRepository;
+    private ViewHandler $viewHandler;
+    private ViewsArticleRepository $viewsArticleRepository;
 
     public function __construct(
-        ArticleRepository $articleRepository
+        SearchArticleRepository $articleRepository,
+        ViewsArticleRepository $viewsArticleRepository,
+        ViewHandler $viewHandler
     )
     {
         $this->articleRepository = $articleRepository;
+        $this->viewHandler = $viewHandler;
+        $this->viewsArticleRepository = $viewsArticleRepository;
     }
 
     public function search(string $search, int $limit, int $offset = 0): Collection
@@ -28,9 +37,14 @@ class ArticlesService
         return $this->articleRepository->search($search, $limit, $offset);
     }
 
-    public function addToSearch(string $search, int $limit, int $offset = 0): Collection
+    public function viewArticle(Article $article)
     {
-        return $this->articleRepository->search($search, $limit, $offset);
+        $this->viewHandler->handle($article);
+    }
+
+    public function findArticleViews(Article $article): int
+    {
+        return $this->viewsArticleRepository->getViewsCount($article);
     }
 
 }

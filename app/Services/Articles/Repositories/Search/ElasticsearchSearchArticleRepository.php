@@ -5,14 +5,14 @@
  * @author    Egor Gerasimchuk <egor@mister.am>
  */
 
-namespace App\Services\Articles\Repositories;
+namespace App\Services\Articles\Repositories\Search;
 
 use App\Models\Article;
 use Elasticsearch\Client;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
-class ElasticsearchArticleRepository implements ArticleRepository
+class ElasticsearchSearchArticleRepository implements SearchArticleRepository
 {
     private Client $elasticsearch;
 

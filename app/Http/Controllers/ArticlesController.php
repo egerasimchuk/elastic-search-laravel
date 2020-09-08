@@ -38,9 +38,12 @@ class ArticlesController extends Controller
 
     public function show(Article $article)
     {
+        $this->articlesService->viewArticle($article);
         View::share([
             'article' => $article,
+            'articleViews' => $this->articlesService->findArticleViews($article),
         ]);
+
         return view('articles.show');
     }
 }
