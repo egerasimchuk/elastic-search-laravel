@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dc875d6-cfb4-48b7-a89c-02efd5b496ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Console/Commands/Articles/ArticlesSyncViews.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/Articles/Handlers/ViewHandler.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/Articles/Repositories/Search/SearchArticleRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/Articles/Repositories/Statistics.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/Articles/Repositories/Statistics/RedisViewsArticleRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/Articles/Repositories/Statistics/ViewsArticleRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Console/Commands/Articles/ArticlesQueueWorker.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/Articles/Repositories/Search/Handlers/ReindexArticleHandler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/Articles/Repositories/Search/Queues/ReindexArticleQueue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/Queues/RedisSimpleQueue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/Queues/SimpleQueue.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticlesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Articles/ArticlesService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Articles/ArticlesService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Articles/Repositories/ArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Articles/Repositories/ArticleRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Articles/Repositories/ElasticsearchArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Articles/Repositories/Search/ElasticsearchSearchArticleRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Articles/Repositories/EloquentArticleRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Articles/Repositories/Search/EloquentSearchArticleRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ArticleFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ArticleFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_05_082202_create_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_05_082202_create_articles_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/articles/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/articles/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Observers/ArticleObserver.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Observers/ArticleObserver.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +180,8 @@
       <updated>1599293768199</updated>
       <workItem from="1599293769295" duration="8521000" />
       <workItem from="1599501577640" duration="2103000" />
-      <workItem from="1599591207540" duration="4880000" />
+      <workItem from="1599591207540" duration="5912000" />
+      <workItem from="1599678733643" duration="2043000" />
     </task>
     <servers />
   </component>
@@ -198,18 +189,18 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="523" y="139" key="#com.intellij.ide.util.MemberChooser" timestamp="1599296396566">
+    <state x="523" y="139" key="#com.intellij.ide.util.MemberChooser" timestamp="1599679684912">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="523" y="139" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1599296396566" />
+    <state x="523" y="139" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1599679684912" />
     <state x="485" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599596953387">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="485" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1599596953387" />
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599594270836">
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599680097932">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1599594270836" />
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1599680097932" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1599469138005">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -230,10 +221,10 @@
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900/1440.-481.2560.1440@0.0.1440.900" timestamp="1599469138001" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1599294032117" />
-    <state x="431" y="183" key="NewPhpClassDialog" timestamp="1599594183942">
+    <state x="431" y="183" key="NewPhpClassDialog" timestamp="1599680209955">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="431" y="183" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1599594183942" />
+    <state x="431" y="183" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1599680209955" />
     <state x="539" y="380" key="NewPhpFileDialog" timestamp="1599339759461">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

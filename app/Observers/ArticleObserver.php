@@ -8,7 +8,10 @@ use Elasticsearch\Client;
 class ArticleObserver
 {
     private Client $elasticsearch;
-    public function __construct(Client $elasticsearch)
+    public function __construct(
+
+        Client $elasticsearch
+    )
     {
         $this->elasticsearch = $elasticsearch;
     }
