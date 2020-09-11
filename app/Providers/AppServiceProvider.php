@@ -7,6 +7,8 @@ use App\Services\Articles\Repositories\Search\ElasticsearchSearchArticleReposito
 use App\Services\Articles\Repositories\Search\EloquentSearchArticleRepository;
 use App\Services\Articles\Repositories\Statistics\RedisViewsArticleRepository;
 use App\Services\Articles\Repositories\Statistics\ViewsArticleRepository;
+use App\Services\Queues\RedisSimpleQueue;
+use App\Services\Queues\SimpleQueue;
 use Elasticsearch\Client as ElasticsearchClient;
 use Elasticsearch\ClientBuilder;
 use Illuminate\Support\ServiceProvider;
@@ -16,6 +18,7 @@ class AppServiceProvider extends ServiceProvider
 
     public $bindings = [
         ViewsArticleRepository::class => RedisViewsArticleRepository::class,
+        SimpleQueue::class => RedisSimpleQueue::class,
     ];
 
     /**

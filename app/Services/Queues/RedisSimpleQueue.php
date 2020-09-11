@@ -30,9 +30,13 @@ final class RedisSimpleQueue implements SimpleQueue
         $this->redis->lPush($this->generateKey($queue), $data);
     }
 
-    public function pop(string $queue): void
+    public function pop(string $queue): ?string
     {
-        $this->redis->rPop($this->generateKey($queue));
+        $data = $this->redis->brPop($this->generateKey($queue), 5);
+        if (!$data) {
+            return null;
+        }
+        return $data;
     }
 
     private function generateKey(string $queue): string

@@ -18,6 +18,6 @@ $factory->define(Article::class, function (Faker $faker) {
         'title' => $faker->sentence(),
         'body' => $faker->text(),
         'tags' => $tags,
-        'views' => rand(1000, 1000000),
+        'views' => rand(0, 500),
     ];
 });
