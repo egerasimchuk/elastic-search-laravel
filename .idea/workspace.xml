@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dc875d6-cfb4-48b7-a89c-02efd5b496ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Services/Articles/Repositories/Cache/CacheArticleRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/Articles/Repositories/Cache/RedisCacheArticleRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/Articles/Repositories/Statistics/RedisExampleViewsArticleRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Console/Commands/Geo/GeoIndex.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Console/Commands/Geo/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/es-laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/es-laravel.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/Queues/RedisSimpleQueue.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/Queues/RedisSimpleQueue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/ArticleFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ArticleFactory.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +20,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpDebugGeneral" xdebug_debug_port="9002" />
+  <component name="PhpDebugGeneral" xdebug_debug_port="9002">
+    <xdebug_debug_ports port="9002" />
+    <xdebug_debug_ports port="9003" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
@@ -141,7 +142,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Console/Commands/Articles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -157,6 +158,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Console/Commands/Geo" />
       <recent name="$PROJECT_DIR$/app/Console/Commands/Articles" />
       <recent name="$PROJECT_DIR$/resources/views/articles" />
     </key>
@@ -182,73 +184,31 @@
       <workItem from="1599501577640" duration="2103000" />
       <workItem from="1599591207540" duration="5912000" />
       <workItem from="1599678733643" duration="2873000" />
-      <workItem from="1599756612438" duration="2387000" />
+      <workItem from="1599756612438" duration="2542000" />
+      <workItem from="1599915234202" duration="4205000" />
+      <workItem from="1599994129058" duration="1787000" />
+      <workItem from="1600106512359" duration="1437000" />
+      <workItem from="1607160476072" duration="603000" />
+      <workItem from="1607168159805" duration="4615000" />
+      <workItem from="1607360332711" duration="4044000" />
+      <workItem from="1607444445397" duration="786000" />
+      <workItem from="1607616825359" duration="4319000" />
+      <workItem from="1609143663041" duration="228000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="523" y="139" key="#com.intellij.ide.util.MemberChooser" timestamp="1599761574814">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="523" y="139" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1599761574814" />
-    <state x="485" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1599596953387">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="485" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1599596953387" />
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1599761624754">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1599761624754" />
-    <state x="522" y="218" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1599761902821">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="522" y="218" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1440.900@0.0.1440.900" timestamp="1599761902821" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1599469138005">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.-481.2560.1440@0.0.1440.900" timestamp="1599469138005" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1599294032118" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1599469137986">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900/1440.-481.2560.1440@0.0.1440.900" timestamp="1599469137986" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1599294032117" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1599469137977">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900/1440.-481.2560.1440@0.0.1440.900" timestamp="1599469137977" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1599294032116" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1599469138001">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900/1440.-481.2560.1440@0.0.1440.900" timestamp="1599469138001" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1599294032117" />
-    <state x="431" y="183" key="NewPhpClassDialog" timestamp="1599761548647">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="431" y="183" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1599761548647" />
-    <state x="539" y="380" key="NewPhpFileDialog" timestamp="1599339759461">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="539" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1599339759461" />
-    <state x="221" y="89" key="SettingsEditor" timestamp="1599391454195">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1599391454195" />
-    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599591940168">
-      <screen x="0" y="23" width="1440" height="801" />
-    </state>
-    <state x="100" y="100" width="1240" height="700" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.801@0.23.1440.801" timestamp="1599591940168" />
-    <state x="418" y="176" width="604" height="548" key="find.popup" timestamp="1599686484409">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="418" y="176" width="604" height="548" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1599686484409" />
-    <state x="369" y="184" width="700" height="530" key="recent.locations.popup" timestamp="1599591601520">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="369" y="184" width="700" height="530" key="recent.locations.popup/0.0.1440.900@0.0.1440.900" timestamp="1599591601520" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Console/Commands/Geo/GeoIndex.php</url>
+          <line>75</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
